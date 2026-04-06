@@ -1,15 +1,15 @@
-function calculadora(valor1, operacao, valor2){
-    if (operacao === '+'){
-        return valor1 + valor2
-    } else if(operacao === '-'){
-        return valor1 - valor2
-    } else if(operacao === '/'){
-        return valor1 / valor2
-    }else if(operacao === '*'){
-        return valor1 * valor2
-    } else{
-        return 'insira um valor válido'
-    }
+const operacoes = {
+    soma: (a, b) => a + b,
+    sub: (a, b) => a - b,
+    div: (a, b) => a / b,
+    mult: (a, b) => a *b,
 }
 
-console.log(calculadora(999879, '*', 835268))
+function calculadora(a, b, operacao){
+    return operacoes[operacao](a, b)
+}
+
+console.log(calculadora(5, 5, "mult"))
+
+
+// sofri um pouco para melhorar a culculadora, mas estou começando a entender
